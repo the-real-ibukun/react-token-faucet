@@ -1,5 +1,6 @@
 import Faucet from './components/Faucet.js'
-import FCTToken from './artifacts/contracts/FCTToken.sol/FCTToken.json'
+import './App.css'
+import FCTToken from './FCTToken.sol'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -12,13 +13,17 @@ function App() {
     <Container>
     <Row className="justify-content-md-center">
       <Col>
-      <div>our faucet</div>
+      <div>Our faucet</div>
       </Col>
       <Col>
-      <div> our send area</div>
+      <div>Our send area</div>
       </Col>
     </Row>
+    <Faucet  tokenContract={Token}/>
     </Container>
+    
+
+ 
     </div>
   );
 }
