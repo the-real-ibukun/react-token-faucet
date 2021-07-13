@@ -1,7 +1,9 @@
-import Faucet from './components/Faucet.js'
+import TokenSend from './components/TokenSend.js'
+import FCTToken from './artifacts/contracts/FCTToken.sol/FCTToken.json'
 import './App.css'
-import FCTToken from './FCTToken.sol'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Faucet from './components/Faucet.js'
+
 import { Container, Row, Col } from 'react-bootstrap'
 
 function App() {
@@ -16,16 +18,16 @@ function App() {
       <div>Our faucet</div>
       </Col>
       <Col>
-      <div>Our send area</div>
+      <div><TokenSend tokenContract={Token}/>
+      </div>
       </Col>
     </Row>
     <Faucet  tokenContract={Token}/>
     </Container>
-    
-
- 
+     
     </div>
   );
 }
 
 export default App;
+
